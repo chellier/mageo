@@ -20,8 +20,8 @@ draw(rec,bp+brown);
 draw(tr.deform(A--C,O),dashed+purple); // O magnetized
 
 
-label("$A$",A,SW);label("$B$",B,SE);
-label("$C$",C,NE);label("$D$",D,NW);
+label("\cmf A",A,SW);label("\cmf B",B,SE);
+label("\cmf C",C,NE);label("\cmf D",D,NW);
 
 dotc("$O$",O,2S,size=.5,angle=0,linewidth(bp));
 dott("$I$",(pair)pI,2NE,B-C,.7,linewidth(bp));
