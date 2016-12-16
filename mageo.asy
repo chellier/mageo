@@ -6,6 +6,11 @@ import graph;
 import geometry;
 import trembling;
 
+texpreamble("\newcommand{\cmf}{
+\fontfamily{cmfr}\fontseries{m}\fontshape{it}\selectfont}
+\newcommand{\es}{\thinspace}");
+
+// ----- modified dot -----
 // un trait perpendiculaire à une direction
 void dott(picture pic=currentpicture, Label L="", pair z, align align=NoAlign, pair dir, real size=1, pen p=currentpen)
 {
@@ -31,6 +36,7 @@ void dotc(picture pic=currentpicture, Label L="", pair z, align align=NoAlign, r
    draw(pic,L,z,align,p,croix);
 }
 
+// ----- accolade de marquage -----
 // accolade
 void brace(picture pic = currentpicture, Label L="", pair A, pair B,
     bool rotated = true, real offset=3mm, pen pb = currentpen, pen pL=pb){
@@ -124,7 +130,7 @@ void distanceTR(picture pic = currentpicture, Label L = "", point A, point B,
   pic.addBox(min(g), max(g), Tp * min(p), Tp * max(p));
 }
 
-// angle droit à main levée
+// ----- angle droit à main levée -----
 void perpendicularmarkTR(picture pic = currentpicture, point z,
                        explicit pair align,
                        explicit pair dir = E, real size = 0,
